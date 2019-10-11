@@ -9,31 +9,32 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     
-    <title>Starter</title>
+    <title>Task Estimator</title>
 </head>
 <body>
     <br><br>
-    <h1>Shortest of 3 Strings</h1>
-    <br>
     <main>
         <form>
-            <div class="form-group">
-                <label for="input1">String 1</label>
-                <input type="text" class="form-control" id="input1" placeholder="String 1">
+            <div id="task_estimator" class="row justify-content-sm-center">
+                <div class="col-sm-10">
+                    <h1>Task Estimator</h1>
+                    <br>
+                </div>
+                <div class="col-sm-4">
+                    <label for="input1">Count of Stories</label>
+                    <input v-model="input1" type="number" class="form-control" id="input1" placeholder="0">
+                </div>
+                <div class="col-sm-4">
+                    <label for="input2">Average Tasks per Story</label>
+                    <input v-model="input2" type="number" class="form-control" id="input2" placeholder="0">
+                </div>
+                <div class="col-sm-8">
+                    <br>
+                    <h2>{{result}}</h2>     
+                </div>
+                
             </div>
-            <div class="form-group">
-                <label for="input2">String 2</label>
-                <input type="text" class="form-control" id="input2" placeholder="String 2">
-            </div>
-            <div class="form-group">
-                <label for="input3">String 3</label>
-                <input type="input" class="form-control" id="input3" placeholder="String 3">
-            </div>
-            <button type="button" id="submit" class="btn btn-dark btn-lg btn-block">Submit</button>
         </form>
-        <br>
-        <h2>Output:</h2>
-        <p id="result"></p>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
     <script src="main.js"></script>
